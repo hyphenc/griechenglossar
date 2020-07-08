@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="de">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Griechisches Glossar</title>
+		<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+body {
+	background: #fffeae;
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	max-width: 900px;
+	margin: 3%;
+	margin-bottom: 50px;
+}
+dt {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#top {
+	display: flex;
+	flex-flow: row nowrap;
+}
+img {
+	height: 200px;
+	margin: auto;
+	filter: opacity(.95);
+}
+dd {
+	text-align: justify;
+	text-justify: inter-word;
+	margin-left: 3.5%;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Glossar griechischer Begriffe</h1>
+		<div id="top">
+		<div>
+			<p>Informationen wurden bezogen aus:</p>
+			<ul>
+				<li>Schwab: Sagen des klassischen Altertums (Insel, ISBN 9783458362135)</li>
+				<li>Homer: Ilias &amp; Odyssee (dtv, ISBN 9783423130004)</li>
+				<li>Günther: Griechische Antike (UTB, ISBN9783825235987)</li>
+				<li><a href="https://luwianstudies.org/de/glossar/">LuwianStudies.org Glossar</a></li>
+			</ul>
+			<input type="text" id="search" placeholder="suchen...">
+		</div>
+		<img src="homer.png">
+		</div>
+		<hr>
+		<div id="data">
+<dt id='AchillAchillesAchilleus'>Achill / Achilles / Achilleus <a href='#top'>↑</a></dt>
+<dd>Sohn des <a href="#Peleus">Peleus</a> und der Meeresgöttin <a href="#Thetis">Thetis</a>.<br>Bleibt endgültig sterblich als seine Mutter den Versuch aufgibt, das Sterbliche (von väterlicherseits) zu vertilgen. Laut Seher <a href="#Kalchas">Kalchas</a> ist er nötig, um den <a href="#Trojanischen Krieg">Trojanischen Krieg</a> zu gewinnen, zu dieser Zeit ist er neun Jahre alt. Mutter hat Bangen (dass er stirbt), entführt und versteckt ihn in Mädchenkleidern bei König <a href="#Lykomedes">Lykomedes</a> auf Skyros. Wird heimlich Gemahl der <a href="#Deïdameia">Deïdameia</a>. <a href="#Odysseus">Odysseus</a> und <a href="#Diomedes">Diomedes</a> werden geschickt, um ihn in den Krieg zu holen. Mithilfe einer List des Odysseus wird der Untergetauchte entlarvt. Er schließt sich mit seinem Erzieher <a href="#Phönix">Phönix</a> und Freund <a href="#Patroklos">Patroklos</a> sowie 50 Schiffen dem griechischen Heer an.<br>SdkA S. 320f.</dd>
+<dt id='ArchäerArchaier'>Archäer / Archaier <a href='#top'>↑</a></dt>
+<dd>Von <a href="#Homer">Homer</a> benutzte Sammelbezeichnung für die Griechen.</dd>
+		</div>
+		<script>
+			document.getElementById("search").value = "";
+document.getElementById("search").onkeydown = function(e){
+	if(e.keyCode == 13){
+		document.getElementById("search").focus();
+		window.find(document.getElementById("search").value,0,0,0,0,0,0);
+	}
+};
+document.onkeydown = function(e){
+	if(e.keyCode == 8 && (document.getElementById("search") === document.activeElement)){
+		document.getElementById("search").focus();
+		document.getElementById("search").value = "";
+	}
+};
+		</script>
+	</body>
+</html>
