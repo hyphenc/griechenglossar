@@ -16,7 +16,7 @@ cat dataset.csv | while read LINE; do
 	BACK="$(sed -n 's|.*;||p' <<< "$LINE")"
 	ID="$(sed 's/[ \\/]//g' <<< "$FRONT")"
 	BACKFORMATTED="$(perl -pe 's|##(.*?)#(.*?)##|<a href="#\2">\1</a>|g' <<< "$BACK")"
-	echo -e "<dt id='""$ID""'><a href='#""$ID""' style='text-decoration:none;color:black !important;'>""$FRONT"" </a><a href='#top' style='text-decoration:none;'>↑</a></dt>\n<dd>"$BACKFORMATTED"</dd>" >> index.html
+	echo -e "<dt id='""$ID""'><a href='#""$ID""'>""$FRONT"" </a><a href='#top'>↑</a></dt>\n<dd>"$BACKFORMATTED"</dd>" >> index.html
 done
 
 # wrap data in html tags and insert
